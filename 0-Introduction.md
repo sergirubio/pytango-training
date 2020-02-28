@@ -1,6 +1,15 @@
 # Introduction to PyTango
 
+Materials used in this training thanks to : 
+
+* [Vincent Michel](https://github.com/vxgmichel)
+* [Tiago Coutinho](https://github.com/tiagocoutinho)
+* [Antoine Dupré](https://github.com/AntoineDupre)
+* [Anton Joubert](https://github.com/ajoubertza)
+
 https://pytango.readthedocs.io/
+
+https://pytango.readthedocs.io/en/stable/quicktour.html
 
 **PyTango** is a python module that exposes to Python the complete Tango C++ API. This means that you can write not only tango applications (scripts, CLIs, GUIs) that access tango device servers but also tango device servers themselves, all of this in pure python.
 
