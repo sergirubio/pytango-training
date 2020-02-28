@@ -22,7 +22,7 @@ https://sourceforge.net/projects/osboxes/files/v/vb/55-U-u/18.04/18.04.2/18042.6
 **LUBUNTU** (much, much faster):
 https://sourceforge.net/projects/osboxes/files/v/vb/33-Lb--t/18.04/18.04.3/L1804.3-64bit.7z/download
 
-## Using the Lubunut (non-standard) image
+## Using the Lubuntu (non-standard) image
 
 The lubuntu image would require these two lines to be removed on deploy_tangoenv.yml file:
 
