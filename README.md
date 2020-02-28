@@ -1,5 +1,12 @@
 # PyTango Training for SKA developers
 
+Materials used in this training thanks to : 
+
+* [Vincent Michel](https://github.com/vxgmichel)
+* [Tiago Coutinho](https://github.com/tiagocoutinho)
+* [Antoine Dupré](https://github.com/AntoineDupre)
+* [Anton Joubert](https://github.com/ajoubertza)
+
 The training will be based on the existing Tango Development Environment for SKA:
 
   https://developer.skatelescope.org/en/latest/tools/tango-devenv-setup.html
