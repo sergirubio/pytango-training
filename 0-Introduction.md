@@ -40,6 +40,19 @@ to less than a half.
 * Pythonic, simpler, shorter and clearer code
 * Due to API simplification, many functionalities become "hidden" (to use all features, fallback to old API is needed).
 
+## Pythonic
+
+Pythonic is an adjective that describes an approach to computer programming that agrees with the founding philosophy of the Python programming language. There are many ways to accomplish the same task in Python, but there is usually one preferred way to do it. This preferred way is called "pythonic."
+
+* Python philosophy of writing code
+* Beautiful is better than ugly.
+* Explicit is better than implicit.
+* Simple is better than complex.
+* Complex is better than complicated.
+* Flat is better than nested.
+* Sparse is better than dense.
+* Readability counts.
+
 ----
 
 ## Topics not covered on the training
