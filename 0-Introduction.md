@@ -40,3 +40,11 @@ to less than a half.
 * Pythonic, simpler, shorter and clearer code
 * Due to API simplification, many functionalities become "hidden" (to use all features, fallback to old API is needed).
 
+----
+
+## Topics not covered on the training
+
+ * Jupyter notebooks
+ * Unit Testing
+ * TGQL
+ ...
