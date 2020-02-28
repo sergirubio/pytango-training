@@ -12,3 +12,22 @@ Documentation and feature examples are valid for both languages and it allows to
 
 But, using a wrapper on top of C++ force us to use an API that is not pythonic. To solve this issue the **Python HL API** is provided, allowing the development of fully-pythonic devices.
 
+----
+
+## PyTango API
+
+https://pytango.readthedocs.io/en/stable/server_api/
+
+* API is almost identical than for C++ (all methods available, all documentation and examples are valid)
+* It's not pythonic (method names and workflow may feel not natural in python)
+* Coding overhead (it's needed to declare many methods that may not be used at all).
+
+## PyTango High Level API (HL)
+
+https://pytango.readthedocs.io/en/stable/server_api/server.html
+
+* Use of python primitives like decorators and properties reduce the number of lines of code to implement 
+to less than a half.
+* Pythonic, simpler, shorter and clearer code
+* Due to API simplification, many functionalities become "hidden" (to use all features, fallback to old API is needed).
+
