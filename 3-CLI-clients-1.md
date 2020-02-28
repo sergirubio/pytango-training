@@ -2,3 +2,87 @@
 
  * Command line clients
  * itango
+
+----
+
+``` bash
+$ itango
+ITango 9.3 -- An interactive Tango client.
+Running on top of Python 2.7.15, IPython 5.8 and PyTango 9.3
+[...]
+```
+
+```python
+# `Device` is an alias for `tango.DeviceProxy`
+In [1]: dev = Device("sys/tg_test/1")
+
+# or can use class name (limits <tab> search space)
+In [2]: dev = TangoTest("sys/tg_test/1")
+
+# is the device running?
+In [3]: dev.ping()
+API_DeviceNotExported: Device sys/tg_test/1 is not exported
+[...]
+
+# No!  Start it, and try again...
+In [4]: dev.ping()
+Out[4]: 1771
+
+```
+----
+
+```python
+# send a command (hard way)
+In [5]: dev.command_inout('DevShort', 1234)
+Out[5]: 1234
+
+# send a command (easy way - PyTango feature)
+In [6]: dev.DevShort(1235)
+Out[6]: 1235
+
+# read an attribute
+In [7]: dev.long_spectrum
+Out[7]:
+array([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+[...]
+       0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], dtype=int32)
+
+# write to it
+In [8]: dev.long_spectrum = (1, 2, 3, 4)
+
+In [9]: dev.long_spectrum
+Out[9]: array([1, 2, 3, 4], dtype=int32)
+```
+
+---
+
+Built-in event monitor - magic `mon` command
+
+```python
+In [11]: dev.poll_attribute('State', 1000)
+
+In [10]: mon -a sys/tg_test/1/State
+'sys/tg_test/1/State' is now being monitored. Type 'mon' to see all events
+
+In [7]: dev.SwitchStates()
+
+In [9]: mon
+ID   Device              Attribute    Value       Quality    Time            
+---- ------------------- ------------ ----------- ---------- ---------------
+   0 sys/tg_test/1       state        RUNNING    ATTR_VALID  16:52:28.564090
+   1 sys/tg_test/1       state        RUNNING    ATTR_VALID  16:52:29.564329
+   2 sys/tg_test/1       state        FAULT      ATTR_VALID  16:52:41.564279
+
+In [10]: mon -d sys/tg_test/1/State
+Stopped monitoring 'sys/tg_test/1/State'
+
+```
+
+Run `mon?` for more info
+
+---
+
+### End of ITango demo
+
+* Lots more info on this page:  [pythonhosted.org/itango](https://pythonhosted.org/itango/)
+* And don't forget it can be used from a Jupyter notebook
