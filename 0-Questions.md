@@ -10,3 +10,5 @@
  * How many use Windows?
  * How many use Mac OSX?
  * How many use Ubuntu?
+ 
+ * How many use other Linux OS?
