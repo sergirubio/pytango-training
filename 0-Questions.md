@@ -2,7 +2,7 @@
 
  * Who has experience with python?
  * Who has experience with Tango?
- * Who  knows SKA  developer guidelines?
+ * Who  has read SKA  developer guidelines?
  * Who has used already the lmc-base-classes?
 
  * How many read my email?
