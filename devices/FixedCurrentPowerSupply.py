@@ -45,6 +45,11 @@ class FixedCurrentPowerSupply(Device):
             self.push_change_event('Current',self.current)
             print(self.current)
         self.set_state(DevState.ON)
+        
+    def read_attr_hardware(self,*args):
+        print('read_hardware')
+        time.sleep(2.)
+
     
     # PROTECTED REGION END #    //  FixedCurrentPowerSupply.class_variable
 
