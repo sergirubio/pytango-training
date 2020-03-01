@@ -11,6 +11,8 @@ https://pytango.readthedocs.io/
 
 https://pytango.readthedocs.io/en/stable/quicktour.html
 
+https://pytango.readthedocs.io/en/stable/howto.html
+
 **PyTango** is a python module that exposes to Python the complete Tango C++ API. This means that you can write not only tango applications (scripts, CLIs, GUIs) that access tango device servers but also tango device servers themselves, all of this in pure python.
 
 PyTango wraps Tango C++ libraries using **Boost:Python**. A new version is currently under development using **pybind11**. It will provide a lighter wrapper and a more modern approach.
