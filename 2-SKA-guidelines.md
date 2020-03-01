@@ -1,3 +1,0 @@
-## Review of SKA guidelines for TANGO devices
-
-...

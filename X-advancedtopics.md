@@ -2,6 +2,7 @@ Testing
 
 
 
+
 ##################################################
 
 Polling 
@@ -29,7 +30,16 @@ background threads
 multiprocess
 separate two threads in two different devices in the same server
 
+## How to deal with Qualities
 
+Sometimes, availability of an attribute does not depend directly on State.
+
+To avoid reading the wrong attribute, you can set its quality to invalid.
+
+Same may happen for an attribute which value is not numeric:
+
+ * HWErrors: No error, quality VALID
+ * HWErrors: Errors received!, quality WARNING
 
 
 ##################################################
