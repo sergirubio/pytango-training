@@ -17,6 +17,12 @@ Acces to Database: Use fandango and cached methods instead of direct access (do 
 
 ##################################################
 
+getting attr list from within the device
+(TEST IT!!)
+self.get_device_attr().get_attribute_list()
+or self.get_device_attr().attr_list
+it accesss the MultiAttribute object
+
 Device Hierarchies
 
 special cases
