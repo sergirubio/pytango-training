@@ -35,13 +35,25 @@ And you will have to use lighter editors for the training (mousepad or geany ins
 This will not be an impediment for the training as all the exercises can be done using 
 a simple lightweight editor.
 
+## Verifying the installation
+
+just do 
+
+    cd /usr/src/ska-docker/docker-compose
+    make up
+    make start jive
+
+And an application like this should appear on screen:
+
+    
+
 ----
 
 # Setup of itango container to run SKABaseDevice Tango classes
 
 ska_logging and skabase libraries will have to be downloaded:
 
-   # On the folder you saved your Device Classes
+   # On the home folder of the VBox user
     git clone https://gitlab.com/ska-telescope/ska-logging
     git clone https://github.com/ska-telescope/lmc-base-classes
     ln -s ska-logging/ska_logging
@@ -56,10 +68,22 @@ this will allow you to launch any SKABaseDevice inheriting device using docker:
 
     cd /usr/src/ska-docker/docker-compose
     make start itango
-    docker exec -it python3 /hostname/.../YourSKADevice.py    
+    docker exec -it python3 /hostname/YourSKADevice.py    
 
 
-    
+## Verifying the setup
+
+just run:
+
+    cd /usr/src/ska-docker/docker-compose
+    make start itango
+    docker exec -it itango python3 /hosthome/skabase/SKABaseDevice/SKABaseDevice.py -?
+
+and this message will appear on screen:
+
+    usage :  SKABaseDevice instance_name [-v[trace level]] [-nodb [-dlist <device name list>]]
+    Instance name defined in database for server SKABaseDevice :
+
 
 
 
