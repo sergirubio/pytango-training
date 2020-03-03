@@ -67,7 +67,7 @@ then, modify the itango.yml file to mount host home on the container:
 this will allow you to launch any SKABaseDevice inheriting device using docker:
 
     cd /usr/src/ska-docker/docker-compose
-    make start itango
+    make start itango #not needed if already shows up in "make status"
     docker exec -it python3 /hostname/YourSKADevice.py    
 
 
@@ -76,10 +76,10 @@ this will allow you to launch any SKABaseDevice inheriting device using docker:
 just run:
 
     cd /usr/src/ska-docker/docker-compose
-    make start itango
-    docker exec -it itango python3 /hosthome/skabase/SKABaseDevice/SKABaseDevice.py -?
+    make start itango #not needed if already shows up in "make status"
+    docker exec -it -e PYTHONPATH=/hosthome itango python3 /hosthome/skabase/SKABaseDevice/SKABaseDevice.py -?
 
-and this message will appear on screen:
+and this message will appear on screen (waiting for a server to be declared):
 
     usage :  SKABaseDevice instance_name [-v[trace level]] [-nodb [-dlist <device name list>]]
     Instance name defined in database for server SKABaseDevice :
