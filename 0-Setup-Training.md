@@ -45,7 +45,7 @@ just do
 
 And an application like this should appear on screen:
 
-    
+    https://tango-controls.readthedocs.io/en/9.2.5/_images/jive.jpg    
 
 ----
 
