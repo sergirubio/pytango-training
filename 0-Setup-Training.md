@@ -53,7 +53,7 @@ And an application like this should appear on screen:
 
 ska_logging and skabase libraries will have to be downloaded:
 
-   # On the home folder of the VBox user
+    # On the home folder of the VBox user
     git clone https://gitlab.com/ska-telescope/ska-logging
     git clone https://github.com/ska-telescope/lmc-base-classes
     ln -s ska-logging/ska_logging
