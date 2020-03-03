@@ -35,18 +35,30 @@ And you will have to use lighter editors for the training (mousepad or geany ins
 This will not be an impediment for the training as all the exercises can be done using 
 a simple lightweight editor.
 
+----
+
 # Setup of itango container to run SKABaseDevice Tango classes
 
 ska_logging and skabase libraries will have to be downloaded:
 
+   # On the folder you saved your Device Classes
     git clone https://gitlab.com/ska-telescope/ska-logging
-    ln -s ska-logging/ska_logging
     git clone https://github.com/ska-telescope/lmc-base-classes
+    ln -s ska-logging/ska_logging
     ln -s lmc-base-classes/skabase
     
 then, modify the itango.yml file to mount host home on the container:
 
-    
+    volumes:
+      - ${HOME}:/hosthome:rw
+
+this will allow you to launch any SKABaseDevice inheriting device using docker:
+
+    cd /usr/src/ska-docker/docker-compose
+    make start itango
+    docker exec -it python3 /hostname/.../YourSKADevice.py    
+
+
     
 
 
